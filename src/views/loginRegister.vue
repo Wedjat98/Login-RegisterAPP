@@ -3,36 +3,36 @@
 		<div class="contain">
 			<div class="big-box" :class="{active:isLogin}">
 				<div class="big-contain" v-if="isLogin">
-					<div class="btitle">账户登录</div>
+					<div class="btitle">ログイン</div>
 					<div class="bform">
-						<input type="email" placeholder="邮箱" v-model="form.useremail">
-						<span class="errTips" v-if="emailError">* 邮箱填写错误 *</span>
-						<input type="password" placeholder="密码" v-model="form.userpwd">
-						<span class="errTips" v-if="emailError">* 密码填写错误 *</span>
+						<input type="email" placeholder="メールアドレス" v-model="form.useremail">
+						<span class="errTips" v-if="emailError">* メールアドレスが違います *</span>
+						<input type="password" placeholder="パスワード" v-model="form.userpwd">
+						<span class="errTips" v-if="emailError">* パスワードが違います。 *</span>
 					</div>
-					<button class="bbutton" @click="login">登录</button>
+					<button class="bbutton" @click="login">ログイン</button>
 				</div>
 				<div class="big-contain" v-else>
-					<div class="btitle">创建账户</div>
+					<div class="btitle">登録</div>
 					<div class="bform">
-						<input type="text" placeholder="用户名" v-model="form.username">
-						<span class="errTips" v-if="existed">* 用户名已经存在！ *</span>
-						<input type="email" placeholder="邮箱" v-model="form.useremail">
-						<input type="password" placeholder="密码" v-model="form.userpwd">
+						<input type="text" placeholder="ユーザー名" v-model="form.username">
+						<span class="errTips" v-if="existed">* 登録済みのユーザー名は登録できません。 *</span>
+						<input type="email" placeholder="メールアドレス" v-model="form.useremail">
+						<input type="password" placeholder="パスワード" v-model="form.userpwd">
 					</div>
-					<button class="bbutton" @click="register">注册</button>
+					<button class="bbutton" @click="register">登録</button>
 				</div>
 			</div>
 			<div class="small-box" :class="{active:isLogin}">
 				<div class="small-contain" v-if="isLogin">
-					<div class="stitle">你好，朋友!</div>
-					<p class="scontent">开始注册，和我们一起旅行</p>
-					<button class="sbutton" @click="changeType">注册</button>
+					<div class="stitle">こんにちは!</div>
+					<p class="scontent">登録して、私たちに参加しましょう</p>
+					<button class="sbutton" @click="changeType">登録</button>
 				</div>
 				<div class="small-contain" v-else>
-					<div class="stitle">欢迎回来!</div>
-					<p class="scontent">与我们保持联系，请登录你的账户</p>
-					<button class="sbutton" @click="changeType">登录</button>
+					<div class="stitle">お帰りなさい!</div>
+					<p class="scontent">常に連絡しましょう、ログインしてください</p>
+					<button class="sbutton" @click="changeType">ログイン</button>
 				</div>
 			</div>
 		</div>
@@ -76,7 +76,7 @@
 					.then( res => {
 						switch(res.data){
 							case 0: 
-								alert("登陆成功！");
+								alert("ログインが成功しました！");
 								break;
 							case -1:
 								this.emailError = true;
@@ -90,7 +90,7 @@
 						console.log(err);
 					})
 				} else{
-					alert("填写不能为空！");
+					alert("空欄に記入してください！");
 				}
 			},
 			register(){
@@ -108,7 +108,7 @@
 					.then( res => {
 						switch(res.data){
 							case 0:
-								alert("注册成功！");
+								alert("登録が成功しましだ！");
 								this.login();
 								break;
 							case -1:
@@ -120,7 +120,7 @@
 						console.log(err);
 					})
 				} else {
-					alert("填写不能为空！");
+					alert("空欄に記入してください！");
 				}
 			}
 		}
