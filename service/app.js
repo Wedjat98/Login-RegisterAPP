@@ -25,4 +25,4 @@ app.all('*', function (req, res, next) {
 app.use("/api/user",userApi);
 
 app.listen(10520);
-console.log("success");
+console.log("success,アプリケーションが実行しました" );

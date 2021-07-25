@@ -1,43 +1,36 @@
 # login-register-vue-node
 
-## 实现功能
+## ログイン・登録機能
 
-实现登录和注册两个功能，实现全栈，数据记录在数据库，前后端分离
-
+ログイン・登録機能、フルスタック、データベースへのデータロギング、フロントエンドとバックエンドの分離
 ------
 
-## 项目部署
+## プロジェクトの展開
 
-### 数据库
+### データベース
 
-数据库表中类型都是为 varchar，建了简单表， user表结构如下：
+データベースのテーブルはvarchar型で、シンプルなユーザーテーブルが作成される
 
-username|password|email
----|:--:|---:
-user|user|user@163.com
-admin|admin|admin@163.com
-
-### 项目初始化
+### プロジェクトの初期化
 ```
 npm install
 ```
 
-### 后端部署和运行
+### バックエンドの初期化と実行
 ```
 cd service
 npm install
 node app.js
 ```
 
-### 运行前端项目
+### フロントエンドプロジェクトの実行
 ```
 npm run serve
 ```
 -------
 
-## 使用到的技术
-
-### 前端：
+## 使用した技術
+### フロントエンド：
 
 - html
 - css
@@ -45,9 +38,9 @@ npm run serve
 - vue-cli
 - vue-router
 
-### 后端：
+### バックエンド：
 
 - node.js
-- express
+- express.js
 - mysql
 --------
