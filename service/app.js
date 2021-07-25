@@ -5,14 +5,14 @@ const app = express();
 
 const userApi = require('./api/userApi.js');
 
-// 解析 application/x-www-form-urlencoded
+//  application/x-www-form-urlencodedの解析
 app.use(bodyParser.urlencoded({ extended: false }));
-// 解析 application/json
+//  application/jsonの解析
 app.use(bodyParser.json());
 
 app.use(cors());
 
-//设置跨域请求
+//クロスドメインリクエストの設定
 app.all('*', function (req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
