@@ -7,7 +7,7 @@ const $sql = require('../db/sqlMap');
 const conn = mysql.createConnection(models.mysql);
 conn.connect();
 
-// register API
+// Login　API
 router.post('/login',(req,res)=>{
 	const user = req.body;
 	const sel_email = $sql.user.select + " where email = '" + user.email + "'";
@@ -29,7 +29,7 @@ router.post('/login',(req,res)=>{
 	})
 });
 
-// Login　API
+// register API
 router.post('/add', (req, res) => {
 	const params = req.body;
 	const sel_sql = $sql.user.select + " where username = '" + params.username + "'";
