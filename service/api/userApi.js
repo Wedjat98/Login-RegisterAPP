@@ -38,7 +38,7 @@ router.post('/add', (req, res) => {
 	
 	conn.query(sel_sql, params.username, (error, results) => {
 		if(error) {
-			console.log(err);
+			console.log(error);
 		}
 		if (results.length != 0 && params.username == results[0].username) {
 			res.send("-1");   // -1 ユーザー名がすでに存在していることを示す

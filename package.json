@@ -13,7 +13,7 @@
     "core-js": "~3.19.3",
     "joi": "^17.5.0",
     "npm-fund-test": "^0.0.1",
-    "vue": "3.2.26",
+    "vue": "2.6.14",
     "vue-router": "3.5.3"
   },
   "devDependencies": {
